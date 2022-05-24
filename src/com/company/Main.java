@@ -8,13 +8,13 @@ public class Main {
         Scanner in = new Scanner(System.in);
 
         System.out.print("a = ");
-        int a = in.nextInt();
+        double a = in.nextDouble();
 
         System.out.print("b = ");
-        int b = in.nextInt();
+        double b = in.nextDouble();
 
         System.out.print("c = ");
-        int c = in.nextInt();
+        double c = in.nextDouble();
 
         SomeKindClass someThing = new SomeKindClass(a, b, c);
 
@@ -22,7 +22,7 @@ public class Main {
         converter = (t) -> new SomeKindClass1(t.a, t.b, t.c);
 
         SomeKindClass1 someThing1 = converter.convert(someThing);
-        System.out.printf("%d, %d, %d",someThing1.a, someThing1.b, someThing1.c);
+        System.out.printf("%f, %f, %f",someThing1.a, someThing1.b, someThing1.c);
 
         System.out.println();
 
@@ -32,6 +32,6 @@ public class Main {
         converter1 = (t) -> new SomeKindClass(t.a, t.b, t.c);
 
         someThing = converter1.convert(someThing1);
-        System.out.printf("%d, %d, %d",someThing.a, someThing.b, someThing1.c);
+        System.out.printf("%f, %f, %f",someThing.a, someThing.b, someThing1.c);
     }
 }
